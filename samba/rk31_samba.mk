@@ -1,4 +1,5 @@
 CUR_PATH := device/rockchip/common/samba
+
 PRODUCT_COPY_FILES += \
     $(CUR_PATH)/bin/rksmbd:/system/bin/rksmbd \
     $(CUR_PATH)/bin/rksmbpasswd:/system/bin/rksmbpasswd \
@@ -6,3 +7,6 @@ PRODUCT_COPY_FILES += \
     $(CUR_PATH)/etc/smb.conf:/system/etc/smb.conf \
     $(CUR_PATH)/etc/smbusers:/system/etc/smbusers \
     $(CUR_PATH)/etc/smbpasswd:/system/etc/smbpasswd
+
+PRODUCT_COPY_FILES += \
+    $(CUR_PATH)/init.box.samba.rc:root/init.box.samba.rc
