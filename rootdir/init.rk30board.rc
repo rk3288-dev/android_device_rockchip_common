@@ -179,3 +179,7 @@ service clear_test /system/bin/systemconfig clear_test
 
 on property:app.firefly.config=1
      start clear_test
+
+service displayd /system/bin/displayd
+    class core
+    socket displayd stream 0760 system system
