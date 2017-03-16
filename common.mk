@@ -70,11 +70,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_$(TARGET_BOARD_HARDWARE).conf:system/etc/audio_policy.conf
 
-# File system
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fstab.rk30board.bootmode.unknown:root/fstab.rk30board.bootmode.unknown \
-    $(LOCAL_PATH)/fstab.rk30board.bootmode.emmc:root/fstab.rk30board.bootmode.emmc
-
 # For audio-recoard
 PRODUCT_PACKAGES += \
     libsrec_jni
