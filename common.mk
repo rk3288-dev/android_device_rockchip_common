@@ -58,7 +58,7 @@ PRODUCT_SYSTEM_SERVER_JARS += \
 $(call inherit-product, vendor/rockchip/pppoe/pppoe.mk)
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.pppoe.xml:system/etc/permissions/android.software.pppoe.xml
+    $(LOCAL_PATH)/pppoe/android.software.pppoe.xml:system/etc/permissions/android.software.pppoe.xml
 
 # Connectivity
 ifeq ($(filter MediaTek_mt7601 MediaTek RealTek Espressif,$(strip $(BOARD_CONNECTIVITY_VENDOR))),)
