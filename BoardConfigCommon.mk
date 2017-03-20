@@ -20,9 +20,6 @@ COMMON_VENDOR_PATH := vendor/rockchip/common
 # Use the non-open-source parts, if they're present
 -include $(COMMON_VENDOR_PATH)/BoardConfigVendor.mk
 
-# Platform
-TARGET_BOARD_HARDWARE ?= rk30board
-
 # Kernel
 BOARD_KERNEL_IMAGE_NAME ?= zImage
 BOARD_CUSTOM_BOOTIMG_MK ?= $(COMMON_DEVICE_PATH)/mkbootimg.mk

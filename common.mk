@@ -20,11 +20,11 @@ PRODUCT_AAPT_PREF_CONFIG ?= xhdpi
 # Rootdir
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.rockchip.rc:root/init.rockchip.rc \
-    $(LOCAL_PATH)/rootdir/init.$(TARGET_BOARD_HARDWARE).rc:root/init.$(TARGET_BOARD_HARDWARE).rc \
-    $(LOCAL_PATH)/rootdir/init.$(TARGET_BOARD_HARDWARE).usb.rc:root/init.$(TARGET_BOARD_HARDWARE).usb.rc \
-    $(LOCAL_PATH)/rootdir/init.$(TARGET_BOARD_HARDWARE).bootmode.emmc.rc:root/init.$(TARGET_BOARD_HARDWARE).bootmode.emmc.rc \
-    $(LOCAL_PATH)/rootdir/init.$(TARGET_BOARD_HARDWARE).bootmode.unknown.rc:root/init.$(TARGET_BOARD_HARDWARE).bootmode.unknown.rc \
-    $(LOCAL_PATH)/ueventd.rockchip.rc:root/ueventd.$(TARGET_BOARD_HARDWARE).rc
+    $(LOCAL_PATH)/rootdir/init.rk30board.rc:root/init.rk30board.rc \
+    $(LOCAL_PATH)/rootdir/init.rk30board.usb.rc:root/init.rk30board.usb.rc \
+    $(LOCAL_PATH)/rootdir/init.rk30board.bootmode.emmc.rc:root/init.rk30board.bootmode.emmc.rc \
+    $(LOCAL_PATH)/rootdir/init.rk30board.bootmode.unknown.rc:root/init.rk30board.bootmode.unknown.rc \
+    $(LOCAL_PATH)/ueventd.rockchip.rc:root/ueventd.rk30board.rc
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -68,7 +68,7 @@ endif
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy_$(TARGET_BOARD_HARDWARE).conf:system/etc/audio_policy.conf
+    $(LOCAL_PATH)/audio/audio_policy_rk30board.conf:system/etc/audio_policy.conf
 
 # For audio-recoard
 PRODUCT_PACKAGES += \
@@ -123,11 +123,11 @@ PRODUCT_PACKAGES += \
 # HALs
 PRODUCT_PACKAGES += \
     power.$(TARGET_BOARD_PLATFORM) \
-    sensors.$(TARGET_BOARD_HARDWARE) \
-    gralloc.$(TARGET_BOARD_HARDWARE) \
-    hwcomposer.$(TARGET_BOARD_HARDWARE) \
+    sensors.rk30board \
+    gralloc.rk30board \
+    hwcomposer.rk30board \
     lights.$(TARGET_BOARD_PLATFORM) \
-    camera.$(TARGET_BOARD_HARDWARE) \
+    camera.rk30board \
     Camera \
     libvpu \
     libstagefrighthw \
@@ -153,9 +153,9 @@ PRODUCT_CHARACTERISTICS ?= tablet
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio_policy.$(TARGET_BOARD_HARDWARE) \
-    audio.primary.$(TARGET_BOARD_HARDWARE) \
-    audio.alsa_usb.$(TARGET_BOARD_HARDWARE) \
+    audio_policy.rk30board \
+    audio.primary.rk30board \
+    audio.alsa_usb.rk30board \
     audio.a2dp.default\
     audio.r_submix.default\
     libaudioroute\
@@ -168,8 +168,8 @@ PRODUCT_PACKAGES += \
     libtinyalsa
 
 PRODUCT_PACKAGES += \
-    alsa.audio.primary.$(TARGET_BOARD_HARDWARE)\
-    alsa.audio_policy.$(TARGET_BOARD_HARDWARE)
+    alsa.audio.primary.rk30board\
+    alsa.audio_policy.rk30board
 
 $(call inherit-product-if-exists, external/alsa-lib/copy.mk)
 $(call inherit-product-if-exists, external/alsa-utils/copy.mk)
@@ -255,7 +255,7 @@ endif
 ifeq ($(strip $(BOARD_CONNECTIVITY_MODULE)), ap6xxx_nfc)
 #NFC packages
 PRODUCT_PACKAGES += \
-    nfc_nci.$(TARGET_BOARD_HARDWARE) \
+    nfc_nci.rk30board \
     NfcNci \
     Tag \
     com.android.nfc_extras
@@ -318,7 +318,7 @@ ifeq ($(strip $(BOARD_SUPPORT_HDMI_CEC)),true)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.hdmi.cec.xml:system/etc/permissions/android.hardware.hdmi.cec.xml
 PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.device_type=4
-PRODUCT_PACKAGES += hdmi_cec.$(TARGET_BOARD_HARDWARE)
+PRODUCT_PACKAGES += hdmi_cec.rk30board
 endif # BOARD_SUPPORT_HDMI_CEC
 
 PRODUCT_PACKAGES += \
