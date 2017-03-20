@@ -22,7 +22,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.rockchip.rc:root/init.rockchip.rc \
     $(LOCAL_PATH)/rootdir/init.rk30board.rc:root/init.rk30board.rc \
     $(LOCAL_PATH)/rootdir/init.rk30board.usb.rc:root/init.rk30board.usb.rc \
-    $(LOCAL_PATH)/ueventd.rockchip.rc:root/ueventd.rk30board.rc
+    $(LOCAL_PATH)/rootdir/ueventd.rockchip.rc:root/ueventd.rk30board.rc
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -61,7 +61,7 @@ PRODUCT_COPY_FILES += \
 # Connectivity
 ifeq ($(filter MediaTek_mt7601 MediaTek RealTek Espressif,$(strip $(BOARD_CONNECTIVITY_VENDOR))),)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.connectivity.rc:root/init.connectivity.rc
+    $(LOCAL_PATH)/rootdir/init.connectivity.rc:root/init.connectivity.rc
 endif
 
 # Audio
