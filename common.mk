@@ -22,8 +22,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.rockchip.rc:root/init.rockchip.rc \
     $(LOCAL_PATH)/rootdir/init.rk30board.rc:root/init.rk30board.rc \
     $(LOCAL_PATH)/rootdir/init.rk30board.usb.rc:root/init.rk30board.usb.rc \
-    $(LOCAL_PATH)/rootdir/init.rk30board.bootmode.emmc.rc:root/init.rk30board.bootmode.emmc.rc \
-    $(LOCAL_PATH)/rootdir/init.rk30board.bootmode.unknown.rc:root/init.rk30board.bootmode.unknown.rc \
     $(LOCAL_PATH)/ueventd.rockchip.rc:root/ueventd.rk30board.rc
 
 # Media
