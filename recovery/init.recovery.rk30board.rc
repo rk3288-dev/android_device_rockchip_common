@@ -1,0 +1,7 @@
+on boot
+    setprop UserVolumeLabel "RockChip"
+    setprop InternalSD_ROOT "/mnt/internal_sd"
+    setprop ExternalSD_ROOT "/mnt/external_sd"
+
+on fs
+    write /sys/block/mmcblk0/bdi/read_ahead_kb 2048

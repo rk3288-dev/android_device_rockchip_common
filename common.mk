@@ -228,8 +228,8 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
 # Recovery
-PRODUCT_PACKAGES += \
-    librecovery_ui_$(TARGET_PRODUCT)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/init.recovery.rk30board.rc:root/init.recovery.rk30board.rc
 
 # WLAN
 $(call inherit-product-if-exists, external/wlan_loader/wifi-firmware.mk)
