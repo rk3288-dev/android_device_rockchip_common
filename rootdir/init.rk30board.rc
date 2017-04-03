@@ -7,14 +7,6 @@ on fs
     mount_all fstab.rk30board
 
 on post-fs
-    insmod /system/lib/modules/ump.ko
-    insmod /system/lib/modules/mali.ko
-    insmod /system/lib/modules/mali_kbase.ko
-    insmod /system/lib/modules/rk30_mirroring.ko
-    insmod /system/lib/modules/rk29-ipp.ko
-    insmod /system/lib/modules/rk29-ipp.ko.3.0.36+
-    insmod /system/lib/modules/rk29-ipp.ko.3.0.101+
-
     # Turn on swap
     swapon_all /fstab.rk30board
 
