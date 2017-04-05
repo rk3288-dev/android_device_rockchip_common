@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_AAPT_CONFIG ?= normal large xlarge hdpi xhdpi xxhdpi
-PRODUCT_AAPT_PREF_CONFIG ?= xhdpi
-
 # Rootdir
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.rockchip.rc:root/init.rockchip.rc \
@@ -147,8 +144,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.enable_boot_charger_mode=0
 
-PRODUCT_CHARACTERISTICS ?= tablet
-
 # Audio
 PRODUCT_PACKAGES += \
     audio_policy.rk30board \
@@ -232,8 +227,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/init.recovery.rk30board.rc:root/init.recovery.rk30board.rc
 
 # WLAN
-$(call inherit-product-if-exists, external/wlan_loader/wifi-firmware.mk)
-
 ifneq ($(filter MediaTek combo_mt66xx, $(strip $(BOARD_CONNECTIVITY_MODULE))), )
 $(call inherit-product-if-exists, hardware/mediatek/config/$(strip $(BOARD_CONNECTIVITY_MODULE))/product_package.mk)
 endif
