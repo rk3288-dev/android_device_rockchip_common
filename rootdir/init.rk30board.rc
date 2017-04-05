@@ -86,6 +86,8 @@ on boot
     chown root system /sys/class/display/HDMI/mode
     chown root system /sys/class/display/HDMI/scale
 
+    write /sys/class/display/HDMI/mode auto
+
     chown root system /sys/class/graphics/fb0/bcsh
     chown root system /sys/class/graphics/fb0/dsp_lut
     chmod 0664 /sys/class/graphics/fb0/bcsh
