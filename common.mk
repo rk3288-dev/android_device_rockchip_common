@@ -21,6 +21,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.rk30board.usb.rc:root/init.rk30board.usb.rc \
     $(LOCAL_PATH)/rootdir/ueventd.rockchip.rc:root/ueventd.rk30board.rc
 
+# Config panel
+PRODUCT_PACKAGES += \
+    ConfigPanel
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles_default.xml:system/etc/media_profiles_default.xml

@@ -82,9 +82,10 @@ on boot
     chown system system /sys/class/backlight/rk28_bl/brightness
 
     # for hdmi
-    chown root system /sys/class/display/HDMI/enable
-    chown root system /sys/class/display/HDMI/mode
-    chown root system /sys/class/display/HDMI/scale
+    chown system system /sys/class/display/HDMI/enable
+    chown system system /sys/class/display/HDMI/mode
+    chmod 0666 /sys/class/display/HDMI/mode
+    chown system system /sys/class/display/HDMI/scale
 
     write /sys/class/display/HDMI/mode auto
 
