@@ -281,11 +281,11 @@ PRODUCT_COPY_FILES += \
     $(call copyNfcFirmware, BCM43341NFCB0_002.001.009.0021.0000_Generic_PreI2C_NCD_Signed_configdata.ncd)
 endif # ap6xxx_nfc
 
-# for realtek bluetooth
+# Bluetooth
 PRODUCT_PACKAGES += \
-    bluetooth_rtk.default \
-    libbt-vendor-rtl8723bs \
-    libbt-vendor-rtl8723bu
+    bluetooth.default \
+    libbt-vendor \
+    bt_vendor.conf
 
 # for realtek and esp8089 wifi
 PRODUCT_PACKAGES += \

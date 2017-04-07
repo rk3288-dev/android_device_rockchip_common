@@ -125,8 +125,6 @@ BOARD_USES_GENERIC_AUDIO ?= true
 
 # Wifi&Bluetooth
 BOARD_HAVE_BLUETOOTH ?= true
-BLUETOOTH_USE_BPLUS ?= false
-BOARD_HAVE_BLUETOOTH_BCM ?= false
 
 include $(COMMON_DEVICE_PATH)/wifi_bt_common.mk
 
