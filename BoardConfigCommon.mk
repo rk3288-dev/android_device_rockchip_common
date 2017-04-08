@@ -93,6 +93,9 @@ ART_USE_HSPACE_COMPACT ?= true
 
 TARGET_USES_LOGD ?= true
 
+# Seccomp filters
+BOARD_SECCOMP_POLICY ?= $(COMMON_DEVICE_PATH)/seccomp
+
 # Recovery
 TARGET_NO_RECOVERY ?= false
 TARGET_ROCHCHIP_RECOVERY ?= true
