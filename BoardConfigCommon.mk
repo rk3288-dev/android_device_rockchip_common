@@ -23,6 +23,9 @@ COMMON_VENDOR_PATH := vendor/rockchip/common
 # Platform
 TARGET_BOARD_HARDWARE ?= rk30board
 
+TARGET_PARAMETERS_BASE ?= $(COMMON_DEVICE_PATH)/parameters.txt
+TARGET_PARAMETERS_BLOCK_DEVICE ?= rk29xxnand
+
 # Kernel
 BOARD_KERNEL_BASE ?= 0x60080000
 BOARD_KERNEL_PAGESIZE ?= 16384
@@ -34,6 +37,8 @@ TARGET_KERNEL_HEADER_ARCH ?= arm
 TARGET_KERNEL_CROSS_COMPILE_PREFIX ?= arm-eabi-
 
 KERNEL_TOOLCHAIN ?= $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-eabi-4.8/bin
+
+BOARD_KERNEL_CMDLINE ?= console=ttyS2 androidboot.hardware=rk30board androidboot.console=ttyS2 init=/init initrd=0x62000000,0x00800000
 
 # GPU configration
 BOARD_USE_LCDC_COMPOSER ?= false
